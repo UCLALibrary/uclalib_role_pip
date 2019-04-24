@@ -1,19 +1,12 @@
 ---
 
-- name: Install base python packages
+- name: Install python and pip
   yum:
-    name: "{{ item }}"
-    state: present
-  with_items: "{{ python_base_packages }}"
-
-- name: Install python pip
-  easy_install:
-    name: pip
+    name: "{{ python_base_packages }}"
     state: present
 
 - name: Install pip packages
   pip:
-    name: "{{ item }}"
+    name: "{{ pip_install_packages }}"
     state: present
-  with_items: "{{ pip_install_packages }}"
   when: pip_install_packages is defined
