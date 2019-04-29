@@ -1,5 +1,10 @@
 ---
 
+# Set the version of python to install - valid options are:
+# default - use the default version of python packaged with the OS
+# 34, 36, etc - version of python you know is available in the EPEL repo
+python_version: "default"
+
 python_base_packages:
   - python
   - python-setuptools
