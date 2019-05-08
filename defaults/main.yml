@@ -10,5 +10,10 @@ python_base_packages:
   - python-setuptools
   - python-devel
   - python-pip
+  - python-virtualenv
+
+use_virtualenv: "no"
+
+virtualenv_path: ""
 
 # pip_install_packages: []

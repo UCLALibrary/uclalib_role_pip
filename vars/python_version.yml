@@ -5,5 +5,4 @@ python_base_packages:
   - python{{ python_version }}-setuptools
   - python{{ python_version }}-devel
   - python{{ python_version }}-pip
-
-python_symblink_src_path: "/bin/pip{{ python_version[0] }}.{{ python_version[1] }}"
+  - python{{ python_version }}-virtualenv

@@ -1,23 +1,7 @@
 ---
 
-- name: Include non-default python verison environment variables
-  include_vars: python_epel.yml
+- import_tasks: "default_install.yml"
+  when: python_version == "default"
+
+- import_tasks: "version_install.yml"
   when: python_version != "default"
-
-- name: Install python and pip
-  yum:
-    name: "{{ python_base_packages }}"
-    state: present
-
-- name: Create pip symlink if non-default version installed
-  file:
-    src: "{{ python_symblink_src_path }}"
-    path: "/bin/pip"
-    state: "link"
-  when: python_version != "default"
-
-- name: Install pip packages
-  pip:
-    name: "{{ pip_install_packages }}"
-    state: present
-  when: pip_install_packages is defined
