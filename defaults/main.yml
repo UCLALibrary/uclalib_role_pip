@@ -8,11 +8,11 @@ python_major_version: "{{ python_version[0] }}"
 
 # The list of base packages to be installed
 python_base_packages:
-  - python
-  - python-setuptools
-  - python-devel
-  - python-pip
-  - python-virtualenv
+  - python36
+  - python3-setuptools
+  - python36-devel
+  - python3-pip
+  - python3-virtualenv
 
 use_virtualenv: "no"
 
