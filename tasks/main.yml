@@ -1,7 +1,9 @@
 ---
 
-- import_tasks: "default_install.yml"
-  when: python_version == "default"
+- include_vars: "python2_pkgs.yml"
+  when: python_major_version == '2'
 
-- import_tasks: "version_install.yml"
-  when: python_version != "default"
+- include_vars: "python3_pkgs.yml"
+  when: python_major_version == '3'
+
+- import_tasks: "python_install.yml"
