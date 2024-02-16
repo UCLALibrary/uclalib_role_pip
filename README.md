@@ -11,10 +11,8 @@ None.
 Role Variables
 --------------
 
-* `python_version` - defines the version of python to install - valid options are:
-    * `default` - use the default version of python packaged with the OS
-    * `34`, `36`, etc - use a version of python you know is available in the EPEL repo
-
+* `python_version` - defines the version of python to install
+    * `27`, `36`, etc - must be a version of python available in the RHEL repo
 
 * `python_base_packages` - defines a list of python packages to install on the system
 

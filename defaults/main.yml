@@ -1,10 +1,12 @@
 ---
 
-# Set the version of python to install - valid options are:
-# default - use the default version of python packaged with the OS
-# 34, 36, etc - version of python you know is available in the EPEL repo
-python_version: "default"
+# Set the version of python to install (e.g. 27, 36, etc.)
+# This version of python must be available in the RHEL repository
+python_version: "36"
 
+python_major_version: "{{ python_version[0] }}"
+
+# The list of base packages to be installed
 python_base_packages:
   - python
   - python-setuptools
